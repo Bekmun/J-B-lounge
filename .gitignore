@@ -1,12 +1,8 @@
-/node_modules
-# /app
+node_modules
+app
 package-lock.json
-README.md
-/src
-.ecrc
-.editorconfig
-.htmlhintrc
-/.vscode
-.stylelintrc.json
-gulpfile.js
-package.json
+src/resources/video-1.mp4
+src/resources/video-2.mp4
+src/resources/video-3.mp4
+src/resources/video-4.mp4
+src/resources/video-5.mp4

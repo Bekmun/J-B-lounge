@@ -1,0 +1,334 @@
+.hero {
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  &__menu-btn {
+    display: none;
+    @include mobile-min-one {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      bottom: 100px;
+      color: var(--white);
+      z-index: 50;
+    }
+  }
+
+  &__arrow {
+    @include mobile-min-one {
+      width: 20px;
+      height: 20px;
+      margin-top: -7px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: "Bank-gothic";
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    user-select: none;
+  }
+
+  &__jb {
+    position: relative;
+    font-size: 130px;
+    line-height: 105px;
+    letter-spacing: -18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 48%;
+      width: 10px;
+      height: 70%;
+      background-color: var(--white);
+    }
+  }
+  &__swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    img {
+      height: 100%;
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  &__social {
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    left: inherit;
+    z-index: 500;
+    width: 60px;
+    height: 60px;
+
+    @include big-desktop {
+      right: 20px;
+    }
+  }
+
+  &__lable {
+    position: relative;
+    background-color: var(--black);
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    animation: pulse 2s 800ms infinite;
+    transition: background-color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      width: 12px;
+      height: 2px;
+      background-color: var(--white);
+      transform: translateX(-50%) translateY(-50%);
+      transition: background-color 0.3s ease-in-out;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      width: 12px;
+      height: 2px;
+      background-color: var(--white);
+      transform: translateX(-50%) translateY(-50%);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: 2px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    @include hover {
+      background-color: var(--white);
+      svg {
+        fill: var(--black);
+      }
+
+      &::after,
+      &::before {
+        background-color: var(--black);
+      }
+    }
+  }
+
+  &__svg-1 {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 45px;
+    height: 42px;
+    fill: var(--white);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+      transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+  }
+  &__svg-2 {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    fill: var(--black);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.1);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  }
+
+  &__soc-name {
+    position: absolute;
+    top: 10px;
+    left: -100px;
+    padding: 6px 13px;
+    font-size: 13px;
+    border-radius: 3px;
+    background: var(--white);
+    color: var(--black);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &::after {
+      content: ">";
+      position: absolute;
+      top: -8px;
+      bottom: 20px;
+      font-size: 37px;
+      color: var(--white);
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.none {
+  background-color: var(--white);
+  &::after {
+    display: none;
+  }
+  &::before {
+    display: none;
+  }
+}
+
+.opacity {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.1);
+}
+.opacity-2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.hero__link:hover .hero__soc-name {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-opened {
+  .hero__link:nth-child(2) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-60px);
+  }
+  .hero__link:nth-child(3) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-120px);
+  }
+  .hero__link:nth-child(4) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-180px);
+  }
+  .hero__link:nth-child(5) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-240px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}
+
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+.arrow {
+  position: absolute;
+  left: 35%;
+  bottom: 0;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+  animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+  animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    bottom: 25%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

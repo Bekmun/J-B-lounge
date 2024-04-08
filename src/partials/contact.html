@@ -1,0 +1,75 @@
+<section class="contact page__section_4">
+  <div class="container">
+    <h2 class="contact__title">КОНТАКТЫ</h2>
+    <div class="contact__content">
+      <div class="contact__content-item centered">
+        <img class="contact__img" src="./img/address.svg" alt="адрес">
+        <h3 class="contact__title-h3">Тайный адрес</h3>
+        <address class="contact__address">
+          г.Воркута, ул.бульвар Пищевиков 17Б, 2-й этаж
+        </address>
+      </div>
+      <div class="contact__content-item centered">
+        <img class="contact__img" src="./img/tame.svg" alt="время">
+        <h3 class="contact__title-h3">Время встречи</h3>
+        <p class="contact__descr">
+          Без выходных - 17:00 - 02:00
+        </p>
+      </div>
+      <div class="contact__content-item centered">
+        <img class="contact__img" src="./img/tel.svg" alt="телефон">
+        <h3 class="contact__title-h3">Забронировать столик?</h3>
+        <address class="contact__address centered">
+          <a href="tel:+79225908212" class="contact__link">+7 (922) 590-82-12</a>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div id="map"></div>
+</section>
+<div class="modal">
+  <div class="modal__main">
+    <h2 class="modal__title modal__title-addit centered">ЗАБРОНИРОВАТЬ СТОЛИК</h2>
+    <p class="modal__descr modal__descr-addit centered">Мы свяжемся с Вами в течение 10 минут для подтверждения
+      бронирования</p>
+    <form action="#" class="form" id="form" method="POST" enctype="multipart/form-data">
+      <div class="form__input-box">
+        <input for="text" type="text" class="form__input" id="name" name="Имя">
+        <label for="text" class="form__label">Ваше Имя</label>
+      </div>
+      <div class="form__input-box">
+        <input for="tel" type="tel" class="form__input" id="tel" name="Телефон">
+        <label for="tel" class="form__label">Ваш Телефон</label>
+      </div>
+      <div class="form__input-box">
+        <input for="number" type="number" class="form__input" id="number" name="Количество человек">
+        <label for="number" class="form__label">Количество Гостей</label>
+      </div>
+      <div class="form__input-box">
+        <input for="data" type="date" class="form__input form__input-data" id="data" autocomplete="false" name="Дата">
+        <label for="data" class="form__label">Дата</label>
+      </div>
+      <div class="form__input-box">
+        <input for="time" type="time" class="form__input form__input-data" placeholder="Время" id="time" name="Время">
+        <label for="time" class="form__label">Время</label>
+      </div>
+      <button class="form__btn btn-reset" type="submit">ЗАБРОНИРОВАТЬ</button>
+    </form>
+    <button class="modal__close btn-reset">&#10006;</button>
+  </div>
+  <div class="modal__thenks">
+    <h2 class="modal__thenks-title modal__title-addit centered">СПАСИБО</h2>
+    <p class="modal__thenks-descr modal__descr-addit centered">Мы свяжемся с Вами в течение 15 минут для подтверждения
+      бронирования.</p>
+      <a href="/" class="modal__thenks--link">На главную</a>
+  </div>
+</div>
+<button class="go-top btn-reset">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" xml:space="preserve"
+    class="">
+    <g>
+      <path d="m42.5 49.7-7.1-7.1L64 14l28.6 28.6-7.1 7.1L69 33.1V95H59V33.1zM14 104v10h100v-10z"></path>
+    </g>
+  </svg>
+</button>

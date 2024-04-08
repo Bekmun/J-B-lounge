@@ -1,0 +1,373 @@
+.contact {
+  padding-top: 60px;
+  @include mobile {
+    padding-top: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__title-h3 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+    @include big-desktop {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__address,
+  &__descr {
+    line-height: 20px;
+    color: #afaeae;
+    font-style: normal;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  #map {
+    width: 100%;
+    height: 400px;
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+
+    @include mobile {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__content-item {
+    user-select: none;
+  }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 700;
+  cursor: pointer;
+  padding: 30px;
+  overflow-y: auto;
+  display: none;
+
+  @include mobile-min-one {
+    padding: 15px 30px 15px 30px;
+  }
+
+  &__main {
+    position: relative;
+    max-width: 600px;
+    background-color: #ececec;
+    color: var(--black);
+    margin: auto;
+    padding: 30px;
+    cursor: default;
+    border-radius: 5px;
+
+    &--close {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__close {
+    outline: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+
+    &:focus {
+      outline: 2px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      text-shadow: 1px 1px 2px rgb(7, 7, 7);
+    }
+  }
+
+  &__title-addit {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+    @include mobile-min {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__descr-addit {
+    line-height: 25px;
+    margin-bottom: 15px;
+
+    @include mobile-min {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__thenks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    background-color: #ececec;
+    color: var(--black);
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out, visibility 0.3s ease-in-out;
+    background-image: url(../img/favicon.svg);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center 50px;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__thenks-title {
+    font-size: 70px;
+    line-height: 80px;
+
+    @include mobile-min-one {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 10px;
+    }
+
+    @include mobile-min {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  &__thenks--link {
+    outline: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    outline: 2px solid var(--black);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding: 10px 40px;
+
+    &:focus {
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.form {
+  &__input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-size: 16px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    @include mobile {
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+
+  &__input-data {
+    max-width: 245px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    padding: 0 5px;
+    background-color: #ececec;
+    font-size: 14px;
+  }
+
+  &__btn {
+    outline: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    outline: 2px solid var(--black);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:focus {
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.just-validate-error-field {
+  border-color: rgb(184, 17, 17);
+}
+
+.go-top {
+  position: fixed;
+  outline: none;
+  right: 60px;
+  bottom: 30px;
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  z-index: 500;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+  display: none;
+  svg {
+    fill: #000;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 3px;
+  }
+
+  &:hover {
+    background-color: var(--black);
+    svg {
+      fill: var(--white);
+    }
+  }
+
+  @include big-desktop {
+    right: 20px;
+  }
+}
+
+.go-top--show {
+  display: block;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}

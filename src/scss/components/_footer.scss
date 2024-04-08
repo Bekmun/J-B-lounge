@@ -1,0 +1,39 @@
+.footer {
+  padding: 10px 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile-min-one {
+      flex-direction: column;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+
+    @include mobile-min-one {
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    transition: color .3s ease-in-out;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: aquamarine;
+    }
+  }
+}
