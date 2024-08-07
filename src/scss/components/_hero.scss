@@ -45,6 +45,9 @@
     margin-bottom: 20px;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
     user-select: none;
+    opacity: 0;
+    scale: 0.5;
+    transform: translateY(100px);
   }
 
   &__jb {
@@ -93,6 +96,8 @@
     z-index: 500;
     width: 60px;
     height: 60px;
+    opacity: 0;
+    scale: 0.3;
 
     @include big-desktop {
       right: 20px;

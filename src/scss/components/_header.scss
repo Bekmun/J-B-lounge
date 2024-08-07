@@ -64,6 +64,8 @@
     background-color: var(--white);
     box-shadow: 0 0.5px 17.5px 2px #dddddd;
     transition: box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(30px);
 
     &:focus {
       outline: var(--outline);
@@ -193,6 +195,11 @@
     visibility: visible !important;
     z-index: 1000;
   }
+}
+
+.scroll-btn {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .modal-btn {
