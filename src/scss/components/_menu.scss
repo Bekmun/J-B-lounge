@@ -70,26 +70,28 @@
       background-image: url(../img/cola.svg);
     }
     &:nth-child(5) {
-      background-image: url(../img/smoothie.svg);
-    }
-    &:nth-child(6) {
-      background-image: url(../img/dessert.svg);
-    }
-    &:nth-child(7) {
       background-image: url(../img/tea.svg);
     }
-    &:nth-child(8) {
+    &:nth-child(6) {
       background-image: url(../img/coffee.svg);
+    }
+    &:nth-child(7) {
+      background-image: url(../img/smoothie.svg);
     }
   }
 
-  &__title-h3 {
+  &__title-h3, &__title-h4 {
     font-weight: 700;
     font-size: 26px;
     line-height: 30px;
     @include mobile {
       font-size: 20px;
     }
+  }
+  &__title-h4 {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   &__item-title,
