@@ -4,7 +4,6 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-$title = "Тема письма";
 $file = $_FILES['file'];
 
 $c = true;
@@ -32,18 +31,18 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'zikiriyabek@gmail.com'; // Логин на почте
-  $mail->Password   = 'zwyhisnzhslcgwly'; // Пароль на почте
+  $mail->Host       = 'smtp.yandex.com'; // SMTP сервера вашей почты
+  $mail->Username   = 'bekbolot-v@yandex.ru'; // Логин на почте
+  $mail->Password   = 'iwkfrkhzgjzkkbdy'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('zikiriyabek@gmail.com', 'J|B lounge'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('bekbolot-v@yandex.ru', 'J|B lounge'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('jb.lounge.vorkuta@gmail.com');
   $mail->addAddress('sabirov461@gmail.com');
-  $mail->addAddress('zikiriyabek@gmail.com');
+  $mail->addAddress('bekbolot-v@yandex.ru');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {
