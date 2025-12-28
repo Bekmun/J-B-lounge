@@ -81,6 +81,7 @@ validate
 
     xhr.open("POST", "mail.php", true);
     xhr.send(formData);
+    console.log(event.target);
 
     // очистка
     event.target.reset();
