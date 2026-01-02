@@ -296,6 +296,47 @@
     font-size: 14px;
   }
 
+  &__label-checkbox {
+    top: -4px;
+    left: 40px;
+    cursor: pointer;
+    padding: 0;
+    max-width: 300px;
+    font-style: italic;
+  }
+
+  &__input-checkbox {
+    position: relative;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 40%;
+      left: 60%;
+      width: 15px;
+      height: 15px;
+      transform: translate(-50%, -50%);
+    }
+
+    &:checked::before {
+      content: "\2714";
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+
   &__btn {
     outline: none;
     font-weight: 700;

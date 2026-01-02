@@ -62,6 +62,12 @@ validate
       errorMessage: "Укажите время",
     },
   ])
+  .addField("#checkbox", [
+    {
+      rule: "required",
+      errorMessage: "Нужно ваша согласие",
+    },
+  ])
   .onSuccess((event) => {
     let formData = new FormData(event.target);
 
