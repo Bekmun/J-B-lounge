@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font-family: "Open Sans";
   --content-width: 1260px;
@@ -27,6 +28,13 @@
   font-family: "Bank-gothic";
   src: url("../fonts/bank_gothic_medium.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTNooksScript";
+  src: url("../fonts/TTNooksScript-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
@@ -1105,13 +1113,19 @@ a {
   background-image: url(../img/tea.svg);
 }
 .menu__hookah:nth-child(6) {
-  background-image: url(../img/coffee.svg);
+  background-image: url(../img/tea.svg);
 }
 .menu__hookah:nth-child(7) {
+  background-image: url(../img/coffee.svg);
+}
+.menu__hookah:nth-child(8) {
   background-image: url(../img/smoothie.svg);
 }
 .menu__hookah:nth-child(9) {
   background-image: url(../img/beer.svg);
+}
+.menu__hookah:nth-child(10) {
+  background-image: url(../img/sneki.svg);
 }
 .menu__title-h3 {
   font-weight: 700;
@@ -1515,6 +1529,43 @@ a {
   padding: 0 5px;
   background-color: #ececec;
   font-size: 14px;
+}
+.form__label-checkbox {
+  top: -4px;
+  left: 40px;
+  cursor: pointer;
+  padding: 0;
+  max-width: 300px;
+  font-style: italic;
+}
+.form__input-checkbox {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form__input-checkbox::before {
+  position: absolute;
+  content: "";
+  top: 40%;
+  left: 60%;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+}
+.form__input-checkbox:checked::before {
+  content: "✔";
+}
+.form__input-checkbox:focus {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+.form__input-checkbox:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 .form__btn {
   outline: none;

@@ -73,13 +73,19 @@
       background-image: url(../img/tea.svg);
     }
     &:nth-child(6) {
-      background-image: url(../img/coffee.svg);
+      background-image: url(../img/tea.svg);
     }
     &:nth-child(7) {
-      background-image: url(../img/smoothie.svg);
+      background-image: url(../img/coffee.svg);
     }
     &:nth-child(8) {
+      background-image: url(../img/smoothie.svg);
+    }
+    &:nth-child(9) {
       background-image: url(../img/beer.svg);
+    }
+    &:nth-child(10) {
+      background-image: url(../img/sneki.svg);
     }
   }
 
